@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Provider Dashboard - EQAS Portal</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="header">
+        <h1>NCG EQAS Portal (Provider)</h1>
+        <nav class="header-nav">
+            <a href="#">My Dashboard</a>
+            <a href="login.html">Logout</a>
+        </nav>
+    </header>
+
+    <div class="dashboard-container">
+        
+        <aside class="dashboard-sidebar provider-sidebar">
+            <h3>Provider Menu (MPQAP)</h3>
+            <nav class="dashboard-nav">
+                <ul>
+                    <li><a href="#centers" class="active">Enrolled Centers</a></li>
+                    
+                    <li><a href="#requests">Enrollment Requests</a></li>
+                    
+                    <li>
+                        <a href="#fish-modules">FISH Modules</a>
+                        <ul class="sub-nav">
+                            <li><a href="#">MPST01 Her2/neu</a></li>
+                            <li><a href="#">MPST02 MYCN</a></li>
+                            <li><a href="#">MPST03 ALK-I</a></li>
+                            <li><a href="#">MPST04 ROSI</a></li>
+                            <li><a href="#">MPST05 MET</a></li>
+                            <li><a href="#">MPST06 EWSRI</a></li>
+                            <li><a href="#">MPST07 1pi9q</a></li>
+                            <li><a href="#">MPST08 EGFR</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#pcr-modules">PCR Modules</a>
+                        <ul class="sub-nav">
+                            <li><a href="#">MPEP Sarcoma</a></li>
+                            <li><a href="#">Translocations</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+
+        <main class="dashboard-main">
+
+            <section id="centers" class="dashboard-content-section">
+                <h2>Enrolled Centers (MPQAP)</h2>
+                <p>List of all centers actively enrolled in your program.</p>
+                
+                <div style="overflow-x: auto;"> <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>Center Name</th>
+                                <th>Staff Position</th>
+                                <th>Staff Name</th>
+                                <th>Staff Email</th>
+                                <th>Landline</th>
+                                <th>Mobile</th>
+                                <th>Address 1</th>
+                                <th>Address 2</th>
+                                <th>City</th>
+                                <th>State</th>
+                                <th>Pincode</th>
+                                <th>Delivery Address</th>
+                                <th>NCG Member</th>
+                                <th>Addition Date</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Sample Hospital</td>
+                                <td>Lab Director</td>
+                                <td>Dr. Jane Doe</td>
+                                <td>jane.doe@sample.com</td>
+                                <td>022-12345678</td>
+                                <td>9876543210</td>
+                                <td>123 Main St</td>
+                                <td>Block A</td>
+                                <td>Mumbai</td>
+                                <td>Maharashtra</td>
+                                <td>400012</td>
+                                <td>Same as Address 1</td>
+                                <td><span class="badge badge-success">Yes</span></td>
+                                <td>20-Oct-2025</td>
+                            </tr>
+                            <tr>
+                                <td>Test Lab</td>
+                                <td>Sr. Technician</td>
+                                <td>Mr. Ravi Sharma</td>
+                                <td>ravi@testlab.com</td>
+                                <td>011-87654321</td>
+                                <td>9988776655</td>
+                                <td>456 XYZ Road</td>
+                                <td></td>
+                                <td>New Delhi</td>
+                                <td>Delhi</td>
+                                <td>110001</td>
+                                <td>Lab Receiving, Gate 4</td>
+                                <td><span class="badge badge-warning">No</span></td>
+                                <td>22-Oct-2025</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <section id="requests" class="dashboard-content-section">
+                <h2>Pending Enrollment Requests</h2>
+                <p>Approve or deny new requests from participants.</p>
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>Center Name</th>
+                            <th>Module Requested</th>
+                            <th>NCG Status</th>
+                            <th>Date Requested</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Alpha Diagnostics</td>
+                            <td>FISH: MPST01 Her2/neu</td>
+                            <td><span class="badge badge-warning">No</span></td>
+                            <td>30-Oct-2025</td>
+                            <td>
+                                <button class="btn btn-secondary">Approve</button>
+                                <button class="btn badge-danger">Deny</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Omega Labs</td>
+                            <td>PCR: MPEP Sarcoma</td>
+                            <td><span class="badge badge-success">Yes</span></td>
+                            <td>29-Oct-2025</td>
+                            <td>
+                                <button class="btn btn-secondary">Approve</button>
+                                <button class="btn badge-danger">Deny</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <section id="fish-modules" class="dashboard-content-section">
+                <h2>Manage FISH Module: MPST01 Her2/neu</h2>
+                <p>Manage participants, upload test materials, and publish reports for this module.</p>
+                <button class="btn">View Participants (12)</button>
+                <button class="btn btn-secondary">Upload Test Materials</button>
+            </section>
+            
+            <section id="pcr-modules" class="dashboard-content-section">
+                <h2>Manage PCR Module: MPEP Sarcoma</h2>
+                <p>Manage participants, upload test materials, and publish reports for this module.</p>
+                <button class="btn">View Participants (8)</button>
+                <button class="btn btn-secondary">Upload Test Materials</button>
+            </section>
+
+        </main>
+    </div>
+
+</body>
+</html>
